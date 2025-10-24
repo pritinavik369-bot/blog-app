@@ -66,7 +66,7 @@ app.use('/server/comment', commentRoutes);
 
 
 //deploy
-app.use(express.static(path.join(___direname , 'client/dist')));
+app.use(express.static(path.join(___direname , '/client/dist')));
 app.get('*', (req , res)=>{
   res.sendFile(path.join(___direname , 'client' , 'dist' ,'index.html'));
 })
